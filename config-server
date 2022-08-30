@@ -6,7 +6,15 @@ eureka.instance.instance-id=${spring.application.name}:${instanceId:${random.val
 spring.boot.admin.client.url=http://localhost:9999
 spring.boot.admin.client.instance.management-base-url= http://localhost:${server.port}
 
+spring.datasource.url= jdbc:postgresql://localhost:5432/ezetik_delivery
+spring.datasource.username= postgres
+spring.datasource.password= deve33
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto = update
 
+spring.mvc.pathmatch.matching-strategy=ant-path-matcher
+spring.jackson.date-format=yy-MM-dd
 
 #Actuator
 management.endpoints.web.exposure.include=*
